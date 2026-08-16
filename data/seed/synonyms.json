@@ -1,0 +1,282 @@
+[
+  {
+    "id": "SYN-001",
+    "canonical_term": "change_request",
+    "vietnamese_synonyms": ["yêu cầu thay đổi", "đề nghị thay đổi", "phiếu thay đổi"],
+    "english_synonyms": ["change request", "change proposal", "cr"],
+    "category": "ba",
+    "enabled": true
+  },
+  {
+    "id": "SYN-002",
+    "canonical_term": "impact_analysis",
+    "vietnamese_synonyms": ["phân tích tác động", "đánh giá ảnh hưởng"],
+    "english_synonyms": ["impact analysis", "change impact assessment"],
+    "category": "ba",
+    "enabled": true
+  },
+  {
+    "id": "SYN-003",
+    "canonical_term": "work_order",
+    "vietnamese_synonyms": ["phiếu bảo trì", "lệnh bảo trì", "phiếu công việc"],
+    "english_synonyms": ["work order", "maintenance order", "job order"],
+    "category": "maintenance",
+    "enabled": true
+  },
+  {
+    "id": "SYN-004",
+    "canonical_term": "preventive_maintenance",
+    "vietnamese_synonyms": ["bảo trì phòng ngừa", "bảo trì định kỳ", "bảo dưỡng định kỳ"],
+    "english_synonyms": ["preventive maintenance", "planned maintenance", "pm"],
+    "category": "maintenance",
+    "enabled": true
+  },
+  {
+    "id": "SYN-005",
+    "canonical_term": "emergency_maintenance",
+    "vietnamese_synonyms": ["bảo trì khẩn cấp", "sửa chữa khẩn cấp"],
+    "english_synonyms": ["emergency maintenance", "urgent repair"],
+    "category": "maintenance",
+    "enabled": true
+  },
+  {
+    "id": "SYN-006",
+    "canonical_term": "condition_monitoring",
+    "vietnamese_synonyms": ["giám sát tình trạng", "theo dõi tình trạng"],
+    "english_synonyms": ["condition monitoring", "equipment monitoring"],
+    "category": "monitoring",
+    "enabled": true
+  },
+  {
+    "id": "SYN-007",
+    "canonical_term": "alert",
+    "vietnamese_synonyms": ["cảnh báo", "báo động", "cảnh báo hệ thống"],
+    "english_synonyms": ["alert", "alarm", "warning"],
+    "category": "alert",
+    "enabled": true
+  },
+  {
+    "id": "SYN-008",
+    "canonical_term": "incident",
+    "vietnamese_synonyms": ["sự cố", "vụ việc bất thường"],
+    "english_synonyms": ["incident", "event"],
+    "category": "alert",
+    "enabled": true
+  },
+  {
+    "id": "SYN-009",
+    "canonical_term": "failure",
+    "vietnamese_synonyms": ["hỏng hóc", "lỗi thiết bị", "hư hỏng"],
+    "english_synonyms": ["failure", "breakdown", "fault"],
+    "category": "maintenance",
+    "enabled": true
+  },
+  {
+    "id": "SYN-010",
+    "canonical_term": "technician",
+    "vietnamese_synonyms": ["kỹ thuật viên", "nhân viên kỹ thuật", "nhân viên bảo trì"],
+    "english_synonyms": ["technician", "maintenance technician"],
+    "category": "role",
+    "enabled": true
+  },
+  {
+    "id": "SYN-011",
+    "canonical_term": "maintenance_supervisor",
+    "vietnamese_synonyms": ["giám sát bảo trì", "trưởng ca bảo trì"],
+    "english_synonyms": ["maintenance supervisor", "maintenance lead"],
+    "category": "role",
+    "enabled": true
+  },
+  {
+    "id": "SYN-012",
+    "canonical_term": "maintenance_manager",
+    "vietnamese_synonyms": ["quản lý bảo trì", "trưởng bộ phận bảo trì"],
+    "english_synonyms": ["maintenance manager", "maintenance head"],
+    "category": "role",
+    "enabled": true
+  },
+  {
+    "id": "SYN-013",
+    "canonical_term": "plant_manager",
+    "vietnamese_synonyms": ["quản lý nhà máy", "giám đốc nhà máy"],
+    "english_synonyms": ["plant manager", "factory manager"],
+    "category": "role",
+    "enabled": true
+  },
+  {
+    "id": "SYN-014",
+    "canonical_term": "operator",
+    "vietnamese_synonyms": ["nhân viên vận hành", "người vận hành"],
+    "english_synonyms": ["operator", "machine operator"],
+    "category": "role",
+    "enabled": true
+  },
+  {
+    "id": "SYN-015",
+    "canonical_term": "escalation",
+    "vietnamese_synonyms": ["leo thang", "báo cấp trên", "chuyển cấp xử lý"],
+    "english_synonyms": ["escalation", "escalate"],
+    "category": "sla",
+    "enabled": true
+  },
+  {
+    "id": "SYN-016",
+    "canonical_term": "overdue",
+    "vietnamese_synonyms": ["quá hạn", "trễ hạn", "trễ SLA"],
+    "english_synonyms": ["overdue", "past due", "sla breach"],
+    "category": "sla",
+    "enabled": true
+  },
+  {
+    "id": "SYN-017",
+    "canonical_term": "service_level_agreement",
+    "vietnamese_synonyms": ["cam kết mức dịch vụ", "thời hạn xử lý"],
+    "english_synonyms": ["service level agreement", "sla"],
+    "category": "sla",
+    "enabled": true
+  },
+  {
+    "id": "SYN-018",
+    "canonical_term": "acknowledge",
+    "vietnamese_synonyms": ["tiếp nhận", "xác nhận đã nhận", "ghi nhận cảnh báo"],
+    "english_synonyms": ["acknowledge", "accept"],
+    "category": "workflow",
+    "enabled": true
+  },
+  {
+    "id": "SYN-019",
+    "canonical_term": "assignment",
+    "vietnamese_synonyms": ["phân công", "giao việc", "chỉ định kỹ thuật viên", "tiếp nhận công việc"],
+    "english_synonyms": ["assignment", "assign"],
+    "category": "workflow",
+    "enabled": true
+  },
+  {
+    "id": "SYN-020",
+    "canonical_term": "closure",
+    "vietnamese_synonyms": ["đóng phiếu", "hoàn tất phiếu", "xác nhận hoàn tất", "đóng work order", "hoàn tất work order"],
+    "english_synonyms": ["closure", "close", "completion"],
+    "category": "workflow",
+    "enabled": true
+  },
+  {
+    "id": "SYN-021",
+    "canonical_term": "downtime",
+    "vietnamese_synonyms": ["thời gian dừng máy", "ngừng máy"],
+    "english_synonyms": ["downtime", "machine stop time"],
+    "category": "kpi",
+    "enabled": true
+  },
+  {
+    "id": "SYN-022",
+    "canonical_term": "runtime",
+    "vietnamese_synonyms": ["giờ vận hành", "thời gian chạy", "số giờ chạy"],
+    "english_synonyms": ["runtime", "operating hours", "run hours"],
+    "category": "monitoring",
+    "enabled": true
+  },
+  {
+    "id": "SYN-023",
+    "canonical_term": "temperature",
+    "vietnamese_synonyms": ["nhiệt độ", "nhiệt"],
+    "english_synonyms": ["temperature", "thermal"],
+    "category": "monitoring",
+    "enabled": true
+  },
+  {
+    "id": "SYN-024",
+    "canonical_term": "vibration",
+    "vietnamese_synonyms": ["độ rung", "rung động"],
+    "english_synonyms": ["vibration", "vibrational"],
+    "category": "monitoring",
+    "enabled": true
+  },
+  {
+    "id": "SYN-025",
+    "canonical_term": "threshold",
+    "vietnamese_synonyms": ["ngưỡng", "mức giới hạn"],
+    "english_synonyms": ["threshold", "limit"],
+    "category": "monitoring",
+    "enabled": true
+  },
+  {
+    "id": "SYN-026",
+    "canonical_term": "severity",
+    "vietnamese_synonyms": ["mức độ nghiêm trọng", "độ nghiêm trọng"],
+    "english_synonyms": ["severity", "criticality"],
+    "category": "alert",
+    "enabled": true
+  },
+  {
+    "id": "SYN-027",
+    "canonical_term": "critical",
+    "vietnamese_synonyms": ["nghiêm trọng", "khẩn cấp", "mức critical"],
+    "english_synonyms": ["critical", "severe"],
+    "category": "priority",
+    "enabled": true
+  },
+  {
+    "id": "SYN-028",
+    "canonical_term": "high",
+    "vietnamese_synonyms": ["mức cao", "ưu tiên cao"],
+    "english_synonyms": ["high"],
+    "category": "priority",
+    "enabled": true
+  },
+  {
+    "id": "SYN-029",
+    "canonical_term": "priority_one",
+    "vietnamese_synonyms": ["ưu tiên p1", "mức p1"],
+    "english_synonyms": ["priority p1", "p1"],
+    "category": "priority",
+    "enabled": true
+  },
+  {
+    "id": "SYN-030",
+    "canonical_term": "permission",
+    "vietnamese_synonyms": ["quyền", "quyền thao tác", "phân quyền", "được phép", "chỉ được phép"],
+    "english_synonyms": ["permission", "authorization"],
+    "category": "security",
+    "enabled": true
+  },
+  {
+    "id": "SYN-031",
+    "canonical_term": "role",
+    "vietnamese_synonyms": ["vai trò", "chức danh hệ thống"],
+    "english_synonyms": ["role", "user role"],
+    "category": "security",
+    "enabled": true
+  },
+  {
+    "id": "SYN-032",
+    "canonical_term": "notification",
+    "vietnamese_synonyms": ["thông báo", "nhắc việc"],
+    "english_synonyms": ["notification", "message", "reminder"],
+    "category": "notification",
+    "enabled": true
+  },
+  {
+    "id": "SYN-033",
+    "canonical_term": "equipment",
+    "vietnamese_synonyms": ["thiết bị", "máy móc"],
+    "english_synonyms": ["equipment", "asset", "machine"],
+    "category": "equipment",
+    "enabled": true
+  },
+  {
+    "id": "SYN-034",
+    "canonical_term": "cnc_machine",
+    "vietnamese_synonyms": ["máy cnc", "máy gia công cnc"],
+    "english_synonyms": ["cnc machine", "computer numerical control machine"],
+    "category": "equipment",
+    "enabled": true
+  },
+  {
+    "id": "SYN-035",
+    "canonical_term": "motor",
+    "vietnamese_synonyms": ["động cơ", "mô tơ"],
+    "english_synonyms": ["motor", "electric motor"],
+    "category": "equipment",
+    "enabled": true
+  }
+]

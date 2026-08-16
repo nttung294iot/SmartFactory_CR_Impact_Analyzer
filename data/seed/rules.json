@@ -1,0 +1,500 @@
+[
+  {
+    "id": "RULE-MON-001",
+    "name": "Sensor Threshold",
+    "category": "Sensor Threshold",
+    "keywords": [
+      "threshold",
+      "temperature",
+      "vibration",
+      "continuous",
+      "minute",
+      "critical",
+      "high"
+    ],
+    "required_keywords": [
+      "threshold"
+    ],
+    "optional_keywords": [
+      "temperature",
+      "vibration",
+      "continuous",
+      "minute",
+      "critical",
+      "high"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.2,
+    "module_mappings": [
+      "MOD-MON",
+      "MOD-ALT"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case"
+    ],
+    "risk_templates": [
+      "Ngưỡng hoặc thời lượng chưa rõ có thể tạo cảnh báo sai."
+    ],
+    "clarifying_question_templates": [
+      "Ngưỡng, thời lượng liên tục và điều kiện reset được xác định như thế nào?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Supervisor",
+      "capability": "theo dõi chỉ số thiết bị và phát hiện vượt ngưỡng",
+      "business_value": "phát hiện bất thường kịp thời"
+    },
+    "business_rule_template": "Khi chỉ số vượt ngưỡng trong thời lượng đã xác nhận, hệ thống ghi nhận điều kiện bất thường.",
+    "test_scenario_template": {
+      "preconditions": "Thiết bị và ngưỡng giám sát đã được cấu hình",
+      "test_steps": "Đưa chỉ số qua các giá trị dưới, bằng và trên ngưỡng trong các khoảng thời gian khác nhau",
+      "expected_result": "Hệ thống chỉ ghi nhận điều kiện bất thường khi thỏa ngưỡng và thời lượng",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận ngưỡng và cách tính thời lượng với stakeholder."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-ALT-001",
+    "name": "Alert Creation",
+    "category": "Alert Creation",
+    "keywords": [
+      "alert",
+      "incident",
+      "threshold",
+      "severity",
+      "critical",
+      "high"
+    ],
+    "required_keywords": [
+      "alert"
+    ],
+    "optional_keywords": [
+      "incident",
+      "threshold",
+      "severity",
+      "critical",
+      "high"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.1,
+    "module_mappings": [
+      "MOD-ALT",
+      "MOD-MON"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case",
+      "sop"
+    ],
+    "risk_templates": [
+      "Có thể tạo cảnh báo trùng cho cùng thiết bị và điều kiện."
+    ],
+    "clarifying_question_templates": [
+      "Cảnh báo được nhóm và chống trùng theo thiết bị, chỉ số hay chu kỳ nào?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Supervisor",
+      "capability": "nhận và theo dõi cảnh báo thiết bị",
+      "business_value": "xử lý bất thường có kiểm soát"
+    },
+    "business_rule_template": "Cảnh báo phải lưu thiết bị, mức độ, thời điểm và điều kiện kích hoạt.",
+    "test_scenario_template": {
+      "preconditions": "Có dữ liệu giám sát hợp lệ",
+      "test_steps": "Kích hoạt cùng điều kiện cảnh báo nhiều lần",
+      "expected_result": "Hệ thống tạo cảnh báo đúng và không tạo bản ghi trùng không cần thiết",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Review quy tắc tạo và chống trùng cảnh báo."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-WO-001",
+    "name": "Emergency Work Order",
+    "category": "Emergency Work Order",
+    "keywords": [
+      "work_order",
+      "emergency_maintenance",
+      "critical",
+      "priority_one",
+      "alert",
+      "temperature"
+    ],
+    "required_keywords": [
+      "work_order",
+      "alert",
+      "critical"
+    ],
+    "optional_keywords": [
+      "emergency_maintenance",
+      "priority_one",
+      "alert",
+      "temperature"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.3,
+    "module_mappings": [
+      "MOD-WO",
+      "MOD-ALT",
+      "MOD-MON"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case",
+      "sop"
+    ],
+    "risk_templates": [
+      "Có thể tạo Work Order trùng từ cùng một cảnh báo."
+    ],
+    "clarifying_question_templates": [
+      "Một cảnh báo được phép liên kết tối đa bao nhiêu Work Order đang hoạt động?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Supervisor",
+      "capability": "tạo Emergency Work Order từ cảnh báo nghiêm trọng",
+      "business_value": "rút ngắn thời gian phản ứng"
+    },
+    "business_rule_template": "Alert đủ điều kiện chỉ tạo một Emergency Work Order đang hoạt động.",
+    "test_scenario_template": {
+      "preconditions": "Có alert hợp lệ từ điều kiện bất thường",
+      "test_steps": "Kích hoạt điều kiện tạo Work Order và lặp lại cùng sự kiện",
+      "expected_result": "Một Emergency Work Order được tạo và liên kết với alert nguồn",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận điều kiện tạo Work Order khẩn cấp và quy tắc chống trùng."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-WO-002",
+    "name": "Work Order Assignment",
+    "category": "Work Order Assignment",
+    "keywords": [
+      "work_order",
+      "acknowledge",
+      "assignment",
+      "technician",
+      "priority_one",
+      "minute"
+    ],
+    "required_keywords": [
+      "work_order",
+      "acknowledge"
+    ],
+    "optional_keywords": [
+      "assignment",
+      "technician",
+      "priority_one",
+      "minute"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.2,
+    "module_mappings": [
+      "MOD-WO",
+      "MOD-NOT"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case",
+      "role"
+    ],
+    "risk_templates": [
+      "Trạng thái tiếp nhận không nhất quán có thể làm sai thời điểm escalation."
+    ],
+    "clarifying_question_templates": [
+      "Hành động nào được xem là đã tiếp nhận: acknowledge, assign hay chuyển In Progress?"
+    ],
+    "user_story_template": {
+      "role": "Technician",
+      "capability": "tiếp nhận Work Order được phân công",
+      "business_value": "bắt đầu xử lý đúng SLA"
+    },
+    "business_rule_template": "Thời điểm tiếp nhận Work Order phải được lưu để theo dõi thời hạn phản hồi.",
+    "test_scenario_template": {
+      "preconditions": "Work Order khẩn cấp đã được tạo",
+      "test_steps": "Kỹ thuật viên tiếp nhận trước và sau thời hạn quy định",
+      "expected_result": "Trạng thái và thời điểm tiếp nhận được ghi nhận chính xác",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Thống nhất trạng thái được dùng để tính thời hạn tiếp nhận."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-NOT-001",
+    "name": "SLA and Escalation",
+    "category": "SLA and Escalation",
+    "keywords": [
+      "escalation",
+      "overdue",
+      "service_level_agreement",
+      "minute",
+      "notification",
+      "maintenance_manager",
+      "priority_one"
+    ],
+    "required_keywords": [
+      "escalation"
+    ],
+    "optional_keywords": [
+      "overdue",
+      "service_level_agreement",
+      "minute",
+      "notification",
+      "maintenance_manager",
+      "priority_one"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.3,
+    "module_mappings": [
+      "MOD-NOT",
+      "MOD-WO"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "test_case",
+      "role",
+      "sop"
+    ],
+    "risk_templates": [
+      "Thông báo escalation có thể bị gửi trùng khi tác vụ kiểm tra chạy lặp."
+    ],
+    "clarifying_question_templates": [
+      "Escalation được gửi qua kênh nào, đến vai trò nào và có gửi lại hay không?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Manager",
+      "capability": "nhận thông báo khi Work Order vượt thời hạn phản hồi",
+      "business_value": "can thiệp kịp thời"
+    },
+    "business_rule_template": "Khi Work Order vượt thời hạn đã xác nhận, hệ thống gửi một thông báo escalation đến đúng vai trò.",
+    "test_scenario_template": {
+      "preconditions": "Work Order có thời hạn phản hồi và người nhận đã cấu hình",
+      "test_steps": "Để Work Order chưa tiếp nhận qua mốc thời gian và chạy kiểm tra nhiều lần",
+      "expected_result": "Escalation được gửi đúng thời điểm và không bị trùng",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận kênh, người nhận và quy tắc gửi lại."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-PM-001",
+    "name": "Preventive Maintenance",
+    "category": "Preventive Maintenance",
+    "keywords": [
+      "preventive_maintenance",
+      "runtime",
+      "hour",
+      "schedule",
+      "1000",
+      "equipment"
+    ],
+    "required_keywords": [
+      "preventive_maintenance"
+    ],
+    "optional_keywords": [
+      "runtime",
+      "hour",
+      "schedule",
+      "1000",
+      "equipment"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.3,
+    "module_mappings": [
+      "MOD-PM",
+      "MOD-MON",
+      "MOD-WO"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case",
+      "sop"
+    ],
+    "risk_templates": [
+      "Runtime không chính xác có thể làm lịch bảo trì được tạo sai thời điểm."
+    ],
+    "clarifying_question_templates": [
+      "Mốc runtime được tính từ lần bảo trì gần nhất hay tổng runtime của thiết bị?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Manager",
+      "capability": "tạo lịch bảo trì theo runtime thiết bị",
+      "business_value": "giảm nguy cơ hỏng hóc ngoài kế hoạch"
+    },
+    "business_rule_template": "Khi runtime đạt chu kỳ đã cấu hình và chưa có Work Order PM đang hoạt động, hệ thống tạo lịch bảo trì mới.",
+    "test_scenario_template": {
+      "preconditions": "Thiết bị có runtime và chu kỳ PM hợp lệ",
+      "test_steps": "Kiểm tra tại các mốc ngay trước, đúng và sau chu kỳ",
+      "expected_result": "Lịch PM được tạo đúng mốc và không bị trùng",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận nguồn runtime và mốc bắt đầu chu kỳ."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-WO-003",
+    "name": "Work Order Closure",
+    "category": "Work Order Closure",
+    "keywords": [
+      "work_order",
+      "closure",
+      "completed",
+      "maintenance_manager",
+      "priority_one"
+    ],
+    "required_keywords": [
+      "work_order",
+      "closure"
+    ],
+    "optional_keywords": [
+      "completed",
+      "maintenance_manager",
+      "priority_one"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.2,
+    "module_mappings": [
+      "MOD-WO"
+    ],
+    "artefact_type_mappings": [
+      "business_rule",
+      "user_story",
+      "test_case",
+      "role"
+    ],
+    "risk_templates": [
+      "Work Order có thể được hoàn tất khi thiếu dữ liệu xử lý bắt buộc."
+    ],
+    "clarifying_question_templates": [
+      "Các trường nào bắt buộc trước khi xác nhận hoàn tất Work Order ưu tiên cao?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Manager",
+      "capability": "xác nhận hoàn tất Work Order ưu tiên cao",
+      "business_value": "bảo đảm kết quả bảo trì được kiểm soát"
+    },
+    "business_rule_template": "Chỉ vai trò được chỉ định mới được hoàn tất Work Order ưu tiên cao sau khi đủ dữ liệu bắt buộc.",
+    "test_scenario_template": {
+      "preconditions": "Work Order ưu tiên cao đã có kết quả xử lý",
+      "test_steps": "Thực hiện đóng phiếu bằng vai trò hợp lệ và không hợp lệ, với dữ liệu đủ và thiếu",
+      "expected_result": "Chỉ trường hợp đủ quyền và đủ dữ liệu được chuyển Completed",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận role và dữ liệu bắt buộc trước khi đóng phiếu."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-IAM-001",
+    "name": "Role and Permission",
+    "category": "Role and Permission",
+    "keywords": [
+      "permission",
+      "role",
+      "maintenance_manager",
+      "work_order",
+      "closure",
+      "priority_one"
+    ],
+    "required_keywords": [
+      "permission",
+      "work_order"
+    ],
+    "optional_keywords": [
+      "role",
+      "maintenance_manager",
+      "closure",
+      "priority_one"
+    ],
+    "excluded_keywords": [],
+    "priority_weight": 1.2,
+    "module_mappings": [
+      "MOD-WO"
+    ],
+    "artefact_type_mappings": [
+      "role",
+      "business_rule",
+      "test_case",
+      "user_story"
+    ],
+    "risk_templates": [
+      "Phân quyền không đúng có thể cho phép người dùng thay đổi trạng thái ngoài trách nhiệm."
+    ],
+    "clarifying_question_templates": [
+      "Có vai trò thay thế hoặc cơ chế ủy quyền khi Maintenance Manager vắng mặt không?"
+    ],
+    "user_story_template": {
+      "role": "Maintenance Manager",
+      "capability": "thực hiện thao tác được phân quyền trên Work Order",
+      "business_value": "kiểm soát trách nhiệm nghiệp vụ"
+    },
+    "business_rule_template": "Hệ thống chỉ cho phép vai trò được cấu hình thực hiện thao tác nhạy cảm trên Work Order.",
+    "test_scenario_template": {
+      "preconditions": "Có người dùng thuộc nhiều vai trò khác nhau",
+      "test_steps": "Thực hiện thao tác với vai trò được phép và không được phép",
+      "expected_result": "Hệ thống cho phép hoặc từ chối đúng theo quyền",
+      "priority": "High"
+    },
+    "recommended_actions": [
+      "Xác nhận ma trận phân quyền và trường hợp ủy quyền."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "RULE-GEN-001",
+    "name": "Generic Fallback",
+    "category": "Generic Fallback",
+    "keywords": [],
+    "required_keywords": [],
+    "optional_keywords": [],
+    "excluded_keywords": [],
+    "priority_weight": 1.0,
+    "module_mappings": [],
+    "artefact_type_mappings": [
+      "user_story",
+      "business_rule",
+      "test_case",
+      "role"
+    ],
+    "risk_templates": [
+      "Yêu cầu chưa đủ thông tin để xác định tác động cụ thể."
+    ],
+    "clarifying_question_templates": [
+      "Ai là người sử dụng chính, dữ liệu đầu vào là gì và kết quả mong muốn được đánh giá theo tiêu chí nào?",
+      "Yêu cầu này thay đổi quy trình, dữ liệu hay quyền thao tác hiện tại như thế nào?"
+    ],
+    "user_story_template": {
+      "role": "[BA xác nhận role]",
+      "capability": "làm rõ nhu cầu và phạm vi thay đổi",
+      "business_value": "tạo cơ sở cho phân tích chi tiết"
+    },
+    "business_rule_template": "Chưa tạo Business Rule cụ thể cho đến khi stakeholder xác nhận điều kiện và hành vi mong muốn.",
+    "test_scenario_template": {
+      "preconditions": "Stakeholder đã trả lời câu hỏi làm rõ",
+      "test_steps": "Kiểm tra luồng nghiệp vụ sau khi phạm vi được xác nhận",
+      "expected_result": "Kết quả đáp ứng yêu cầu đã được BA xác nhận",
+      "priority": "Medium"
+    },
+    "recommended_actions": [
+      "Tổ chức phiên làm rõ yêu cầu trước khi cập nhật backlog."
+    ],
+    "enabled": true
+  }
+]

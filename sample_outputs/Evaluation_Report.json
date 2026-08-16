@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "precision_at_k": 0.4057142857142857,
+    "recall_at_k": 0.6333333333333333,
+    "mrr": 0.75,
+    "top_k_hit_rate": 1.0,
+    "rule_coverage": 0.9,
+    "fallback_rate": 0.0,
+    "average_processing_time_ms": 0.112,
+    "impact_module_accuracy": 1.0,
+    "artefact_retrieval_accuracy": 0.6333333333333333,
+    "sample_count": 5,
+    "top_k": 7
+  },
+  "details": [
+    {
+      "cr_id": "CR-001",
+      "precision_at_k": 0.42857142857142855,
+      "recall_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "top_k_hit": 1.0,
+      "rule_coverage": 1.0,
+      "fallback": 0.0,
+      "processing_time_ms": 0.13,
+      "impact_module_accuracy": 1.0,
+      "artefact_retrieval_accuracy": 0.75
+    },
+    {
+      "cr_id": "CR-002",
+      "precision_at_k": 0.14285714285714285,
+      "recall_at_k": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "top_k_hit": 1.0,
+      "rule_coverage": 1.0,
+      "fallback": 0.0,
+      "processing_time_ms": 0.1,
+      "impact_module_accuracy": 1.0,
+      "artefact_retrieval_accuracy": 0.3333333333333333
+    },
+    {
+      "cr_id": "CR-003",
+      "precision_at_k": 0.6,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "top_k_hit": 1.0,
+      "rule_coverage": 1.0,
+      "fallback": 0.0,
+      "processing_time_ms": 0.05,
+      "impact_module_accuracy": 1.0,
+      "artefact_retrieval_accuracy": 1.0
+    },
+    {
+      "cr_id": "CR-004",
+      "precision_at_k": 0.42857142857142855,
+      "recall_at_k": 0.75,
+      "reciprocal_rank": 0.5,
+      "top_k_hit": 1.0,
+      "rule_coverage": 1.0,
+      "fallback": 0.0,
+      "processing_time_ms": 0.09,
+      "impact_module_accuracy": 1.0,
+      "artefact_retrieval_accuracy": 0.75
+    },
+    {
+      "cr_id": "CR-005",
+      "precision_at_k": 0.42857142857142855,
+      "recall_at_k": 0.3333333333333333,
+      "reciprocal_rank": 0.25,
+      "top_k_hit": 1.0,
+      "rule_coverage": 0.5,
+      "fallback": 0.0,
+      "processing_time_ms": 0.19,
+      "impact_module_accuracy": 1.0,
+      "artefact_retrieval_accuracy": 0.3333333333333333
+    }
+  ]
+}

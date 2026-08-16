@@ -1,0 +1,9 @@
+{
+  "top_k": 7,
+  "minimum_bm25_score": 0.0,
+  "rule_threshold": 0.3,
+  "synonym_expansion": true,
+  "phrase_normalization": true,
+  "metadata_filter": true,
+  "application_language": "vi"
+}

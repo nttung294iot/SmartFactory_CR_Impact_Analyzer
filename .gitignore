@@ -1,0 +1,33 @@
+# Python byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# SQLite runtime DB & log files
+data/app.db
+data/app_backup_*.db
+data/app.log
+
+# Exported files (keep directory via .gitkeep)
+data/exports/*.docx
+data/exports/*.xlsx
+!data/exports/.gitkeep
+
+# IDE & OS settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak

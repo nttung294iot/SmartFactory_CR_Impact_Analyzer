@@ -1,0 +1,135 @@
+[
+  {
+    "cr_id": "CR-001",
+    "expected_modules": [
+      "MOD-MON",
+      "MOD-ALT",
+      "MOD-WO"
+    ],
+    "expected_artifacts": [
+      "BR-MON-001",
+      "BR-MON-002",
+      "BR-WO-001",
+      "TC-MON-001"
+    ],
+    "expected_rule_categories": [
+      "Sensor Threshold",
+      "Alert Creation",
+      "Emergency Work Order"
+    ],
+    "expected_questions": [
+      "ngưỡng",
+      "thời lượng",
+      "trùng"
+    ],
+    "expected_risks": [
+      "cảnh báo",
+      "trùng"
+    ]
+  },
+  {
+    "cr_id": "CR-002",
+    "expected_modules": [
+      "MOD-WO",
+      "MOD-NOT"
+    ],
+    "expected_artifacts": [
+      "BR-WO-002",
+      "TC-WO-002",
+      "TC-WO-003"
+    ],
+    "expected_rule_categories": [
+      "Work Order Assignment",
+      "SLA and Escalation"
+    ],
+    "expected_questions": [
+      "tiếp nhận",
+      "kênh"
+    ],
+    "expected_risks": [
+      "trùng"
+    ]
+  },
+  {
+    "cr_id": "CR-003",
+    "expected_modules": [
+      "MOD-PM",
+      "MOD-MON",
+      "MOD-WO"
+    ],
+    "expected_artifacts": [
+      "BR-PM-001",
+      "TC-PM-001",
+      "SOP-003"
+    ],
+    "expected_rule_categories": [
+      "Preventive Maintenance"
+    ],
+    "expected_questions": [
+      "runtime"
+    ],
+    "expected_risks": [
+      "runtime"
+    ]
+  },
+  {
+    "cr_id": "CR-004",
+    "expected_modules": [
+      "MOD-WO"
+    ],
+    "expected_artifacts": [
+      "BR-WO-005",
+      "BR-WO-006",
+      "TC-WO-006",
+      "TC-WO-007"
+    ],
+    "expected_rule_categories": [
+      "Work Order Closure",
+      "Role and Permission"
+    ],
+    "expected_questions": [
+      "vai trò",
+      "dữ liệu"
+    ],
+    "expected_risks": [
+      "quyền"
+    ]
+  },
+  {
+    "cr_id": "CR-005",
+    "expected_modules": [
+      "MOD-MON",
+      "MOD-ALT",
+      "MOD-WO",
+      "MOD-NOT"
+    ],
+    "expected_artifacts": [
+      "BR-MON-001",
+      "BR-MON-002",
+      "BR-WO-001",
+      "BR-WO-005",
+      "BR-WO-006",
+      "TC-MON-001",
+      "TC-WO-001",
+      "SOP-001",
+      "SOP-002"
+    ],
+    "expected_rule_categories": [
+      "Sensor Threshold",
+      "Emergency Work Order",
+      "Work Order Closure",
+      "Role and Permission"
+    ],
+    "expected_questions": [
+      "ngưỡng",
+      "thời lượng",
+      "vai trò",
+      "dữ liệu"
+    ],
+    "expected_risks": [
+      "cảnh báo",
+      "trùng",
+      "quyền"
+    ]
+  }
+]
